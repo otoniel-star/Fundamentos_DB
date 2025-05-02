@@ -1,0 +1,37 @@
+CREATE TABLE Medico (
+ID_Medico Integer PRIMARY KEY,
+Nome Varchar(100),
+DT_Nascimento Date,
+sexo Char(1),
+Telefone Varchar(15),
+Endereco Varchar(100),
+Especialidade Varchar(100),
+CRM Varchar(15)
+);
+CREATE TABLE Paciente (
+ID_Paciente Integer PRIMARY KEY,
+Nome Varchar(100),
+RG Char(10),
+CPF char(11),
+DT_Nascimento Date,
+Sexo Char(1),
+Endereco Varchar(100),
+Email Varchar(100),
+Telefone Varchar(15)
+);
+
+CREATE TABLE Consulta (
+ID_Consulta Integer PRIMARY KEY,
+DT_Consulta Date,
+Localizacao Varchar(100),
+HR_Consulta Time,
+Prescricao Varchar(100),
+Pedido_Exame Varchar(100),
+Diagnostico Varchar(100),
+ID_Paciente Integer,
+ID_Medico Integer,
+FOREIGN KEY(ID_Medico) REFERENCES Medico (ID_Medico),
+FOREIGN KEY(ID_Paciente) REFERENCES Paciente (ID_Paciente)
+);
+
+
