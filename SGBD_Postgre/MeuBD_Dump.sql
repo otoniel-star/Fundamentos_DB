@@ -5,7 +5,7 @@
 -- Dumped from database version 17.4
 -- Dumped by pg_dump version 17.4
 
--- Started on 2025-05-04 01:24:18
+-- Started on 2025-05-04 02:47:06
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -18,25 +18,6 @@ SET check_function_bodies = false;
 SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
-
---
--- TOC entry 4 (class 2615 OID 2200)
--- Name: public; Type: SCHEMA; Schema: -; Owner: pg_database_owner
---
-
-CREATE SCHEMA public;
-
-
-ALTER SCHEMA public OWNER TO pg_database_owner;
-
---
--- TOC entry 4956 (class 0 OID 0)
--- Dependencies: 4
--- Name: SCHEMA public; Type: COMMENT; Schema: -; Owner: pg_database_owner
---
-
-COMMENT ON SCHEMA public IS 'standard public schema';
-
 
 SET default_tablespace = '';
 
@@ -247,6 +228,7 @@ COPY public.conta_corrente (id_conta_corrente, saldo, id_agencia, id_cliente) FR
 --
 
 COPY public.departamento (id_departamento, nome, responsavel, sigla) FROM stdin;
+1	superintendencia de ti	felipe	sti
 \.
 
 
@@ -277,6 +259,9 @@ COPY public.funcionario (id_funcionario, nome, cpf, sexo, telefone, endereco, dt
 --
 
 COPY public.medico (id_medico, nome, dt_nascimento, sexo, telefone, endereco, especialidade, crm) FROM stdin;
+1	otoniel s silva	2001-11-22	m	65996112211	JD.Florianopolis R:20 QD:70 N°15	cirugiao cardiaco	320077
+2	Vitoria cristina	2001-07-07	f	65996112211	JD.araes	cirugiao cerebro	298120
+3	otto s silva	2000-09-10	m	65996112211	JD.Florianopolis R:20 QD:70 N°15	Medico clinico	05050
 \.
 
 
@@ -287,6 +272,12 @@ COPY public.medico (id_medico, nome, dt_nascimento, sexo, telefone, endereco, es
 --
 
 COPY public.paciente (id_paciente, nome, rg, cpf, dt_nascimento, sexo, endereco, email, telefone) FROM stdin;
+1	Ana Paula Silva	123456789 	11122233344	1990-05-12	F	Rua das Flores, 123	ana.silva@gmail.com	(11) 91234-5678
+2	Bruno Costa Almeida	987654321 	22233344455	1985-08-23	M	Av. Brasil, 456	bruno.almeida@yahoo.com	(21) 99876-5432
+3	Carlos Henrique Souza	456789123 	33344455566	1979-11-02	M	Rua A, nº 10, Centro	carlos.souza@outlook.com	(31) 97788-1122
+4	Daniela Moura Lopes	321654987 	44455566677	1995-03-18	F	Rua B, nº 25, Bairro Novo	daniela.lopes@gmail.com	(41) 96655-4433
+5	Eduarda Ramos Teles	654987321 	55566677788	2000-12-30	F	Travessa da Paz, 77	eduarda.teles@hotmail.com	(71) 93456-7890
+6	Felipe Martins Rocha	159753486 	66677788899	1988-07-09	M	Av. Central, 89	felipe.rocha@gmail.com	(85) 94567-1234
 \.
 
 
@@ -425,7 +416,7 @@ ALTER TABLE ONLY public.funcionario
     ADD CONSTRAINT funcionario_id_departamento_fkey FOREIGN KEY (id_departamento) REFERENCES public.departamento(id_departamento);
 
 
--- Completed on 2025-05-04 01:24:19
+-- Completed on 2025-05-04 02:47:07
 
 --
 -- PostgreSQL database dump complete
