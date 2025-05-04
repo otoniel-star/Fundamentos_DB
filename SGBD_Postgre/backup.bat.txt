@@ -1,0 +1,18 @@
+@echo off
+:: Configurações
+set PG_USER=postgres
+set PG_DB=Fundamento_BD
+set PG_PATH="C:\Program Files\PostgreSQL\16\bin\pg_dump.exe"
+set BACKUP_DIR=D:\versionamentoDB\Fundamentos_DB\SGBD_Postgre
+set FILE_NAME=backup_%date:~-4%%date:~3,2%%date:~0,2%.sql
+
+:: Cria o backup no formato plain SQL
+%PG_PATH% -U %PG_USER% -d %PG_DB% -F p -f "%BACKUP_DIR%\%FILE_NAME%"
+
+:: Entra na pasta do projeto
+cd /d %BACKUP_DIR%
+
+:: Git commit e push
+git add .
+git commit -m "Backup automático - %date%"
+git push origin main
