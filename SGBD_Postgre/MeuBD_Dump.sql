@@ -5,7 +5,7 @@
 -- Dumped from database version 17.4
 -- Dumped by pg_dump version 17.4
 
--- Started on 2025-05-04 02:47:06
+-- Started on 2025-05-04 03:06:01
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -208,6 +208,18 @@ COPY public.cliente (id_cliente, nome, telefone, logradouro, cidade, uf) FROM st
 --
 
 COPY public.consulta (id_consulta, dt_consulta, localizacao, hr_consulta, prescricao, pedido_exame, diagnostico, id_paciente, id_medico) FROM stdin;
+1	2025-04-01	Sala 101	08:30:00	Paracetamol 500mg 3x ao dia	Exame de sangue	Febre e dor de cabeça	1	1
+2	2025-04-15	Sala 102	10:00:00	Amoxicilina 500mg 2x ao dia	Raio-X do tórax	Infecção respiratória	1	2
+3	2025-03-22	Sala 201	09:00:00	Dipirona 1g se dor	Exame de urina	Cólica abdominal	2	3
+4	2025-04-10	Sala 103	14:00:00	Ibuprofeno 600mg	Ultrassom abdominal	Dor abdominal	2	1
+5	2025-03-30	Sala 104	11:30:00	Repouso e hidratação	Exame PCR	Virose	3	2
+6	2025-04-12	Sala 105	13:00:00	Losartana 50mg	Eletrocardiograma	Pressão alta	3	3
+7	2025-04-02	Sala 106	08:45:00	Vitamina D 50.000 UI	Exame de sangue	Fraqueza muscular	4	1
+8	2025-04-16	Sala 101	10:30:00	Antibiótico tópico	Cultura de secreção	Infecção de pele	4	2
+9	2025-04-05	Sala 102	15:00:00	Hidroclorotiazida 25mg	Exame de sangue	Retenção de líquidos	5	3
+10	2025-04-20	Sala 103	09:45:00	Pomada antifúngica	Exame micológico	Micose	5	1
+11	2025-04-08	Sala 104	11:15:00	Analgésico leve	RX de coluna	Dor lombar	6	2
+12	2025-04-25	Sala 105	13:30:00	Antiinflamatório	Ressonância	Hérnia de disco	6	3
 \.
 
 
@@ -416,7 +428,7 @@ ALTER TABLE ONLY public.funcionario
     ADD CONSTRAINT funcionario_id_departamento_fkey FOREIGN KEY (id_departamento) REFERENCES public.departamento(id_departamento);
 
 
--- Completed on 2025-05-04 02:47:07
+-- Completed on 2025-05-04 03:06:02
 
 --
 -- PostgreSQL database dump complete
