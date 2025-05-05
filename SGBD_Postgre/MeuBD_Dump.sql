@@ -5,7 +5,7 @@
 -- Dumped from database version 17.4
 -- Dumped by pg_dump version 17.4
 
--- Started on 2025-05-04 21:35:04
+-- Started on 2025-05-04 22:33:12
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -264,6 +264,14 @@ COPY public.emprestimo (id_emprestimo, dt_efetivacao, valor, dt_encerramento, id
 --
 
 COPY public.funcionario (id_funcionario, nome, cpf, sexo, telefone, endereco, dt_admissao, funcao, matricula, id_departamento) FROM stdin;
+1	Marcos Vieira	12345678901	M	65991234567	Rua Alpha, 101	2022-03-15	Técnico de Suporte	MAT2022001	2
+2	Luciana Torres	23456789012	F	65992345678	Rua Beta, 202	2023-01-10	Analista de Suporte	MAT2023002	2
+3	Carlos Mendes	34567890123	M	65993456789	Av. Central, 303	2021-08-01	Administrador de Redes	MAT2021003	3
+4	Patrícia Almeida	45678901234	F	65994567890	Rua das Árvores, 404	2022-11-20	Engenheira de Infraestrutura	MAT2022004	3
+5	Tiago Martins	56789012345	M	65995678901	Rua do Código, 505	2020-05-05	Desenvolvedor Back-End	MAT2020005	4
+6	Fernanda Lima	67890123456	F	65996789012	Av. Tech, 606	2023-04-12	Desenvolvedora Front-End	MAT2023006	4
+7	Juliana Souza	78901234567	F	65997890123	Rua da Inovação, 707	2021-09-15	Gerente de Projetos	MAT2021007	1
+8	André Ferreira	89012345678	M	65998901234	Av. Principal, 808	2022-02-28	Coordenador de TI	MAT2022008	1
 \.
 
 
@@ -431,7 +439,7 @@ ALTER TABLE ONLY public.funcionario
     ADD CONSTRAINT funcionario_id_departamento_fkey FOREIGN KEY (id_departamento) REFERENCES public.departamento(id_departamento);
 
 
--- Completed on 2025-05-04 21:35:05
+-- Completed on 2025-05-04 22:33:13
 
 --
 -- PostgreSQL database dump complete
