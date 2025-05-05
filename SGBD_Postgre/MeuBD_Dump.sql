@@ -5,7 +5,7 @@
 -- Dumped from database version 17.4
 -- Dumped by pg_dump version 17.4
 
--- Started on 2025-05-04 03:06:01
+-- Started on 2025-05-04 21:35:04
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -241,6 +241,9 @@ COPY public.conta_corrente (id_conta_corrente, saldo, id_agencia, id_cliente) FR
 
 COPY public.departamento (id_departamento, nome, responsavel, sigla) FROM stdin;
 1	superintendencia de ti	felipe	sti
+2	coordenadoria de suporte de ti	vitoria	coatsut
+3	coordenadoria de infraestrutura	neto	Coiet
+4	coordenadoria de desenvolvimento	rafael	codemsi
 \.
 
 
@@ -428,7 +431,7 @@ ALTER TABLE ONLY public.funcionario
     ADD CONSTRAINT funcionario_id_departamento_fkey FOREIGN KEY (id_departamento) REFERENCES public.departamento(id_departamento);
 
 
--- Completed on 2025-05-04 03:06:02
+-- Completed on 2025-05-04 21:35:05
 
 --
 -- PostgreSQL database dump complete
