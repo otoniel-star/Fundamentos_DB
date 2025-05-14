@@ -645,3 +645,37 @@
 2025-05-14 14:29:43 -04 LOG:  checkpoint complete: wrote 12 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.215 s, sync=0.021 s, total=1.428 s; sync files=10, longest=0.003 s, average=0.003 s; distance=6 kB, estimate=3688 kB; lsn=0/1E77F40, redo lsn=0/1E77EE8
 2025-05-14 14:34:41 -04 LOG:  checkpoint starting: time
 2025-05-14 14:34:41 -04 LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.439 s, sync=0.012 s, total=0.494 s; sync files=5, longest=0.004 s, average=0.003 s; distance=1 kB, estimate=3319 kB; lsn=0/1E784C8, redo lsn=0/1E78470
+2025-05-14 14:41:26 -04 ERRO:  coluna "email" não existe no caractere 44
+2025-05-14 14:41:26 -04 COMANDO:  select departamento.nome, funcionario.nome,email,telefone
+	from departamento,funcionario
+	where departamento.id_departamento=funcionario.id_departamento
+	order by 1,2
+2025-05-14 14:41:37 -04 ERRO:  coluna "email" não existe no caractere 44
+2025-05-14 14:41:37 -04 COMANDO:  select departamento.nome, funcionario.nome,email,telefone
+	from departamento,funcionario
+	where departamento.id_departamento=funcionario.id_departamento
+	order by 1,2;
+2025-05-14 14:43:12 -04 ERRO:  coluna "email" não existe no caractere 44
+2025-05-14 14:43:12 -04 COMANDO:  select departamento.nome, funcionario.nome,email,telefone
+	from departamento,funcionario
+	where departamento.id_departamento=funcionario.id_departamento
+	order by 1,2;
+2025-05-14 14:44:01 -04 ERRO:  coluna "email" não existe no caractere 44
+2025-05-14 14:44:01 -04 COMANDO:  select departamento.nome, funcionario.nome,email,telefone
+	from departamento,funcionario
+	where departamento.id_departamento=funcionario.id_departamento
+	order by 1,2;
+2025-05-14 15:03:52 -04 ERRO:  relação "consultas" não existe no caractere 16
+2025-05-14 15:03:52 -04 COMANDO:  
+	SELECT * FROM Consultas;
+2025-05-14 15:11:46 -04 ERRO:  coluna consulta.nome não existe no caractere 21
+2025-05-14 15:11:46 -04 COMANDO:  select medico.nome, consulta.nome,dt_consulta,hr_consulta
+	from medico,consulta
+	where medico.id_medico=consulta.id_medico
+	order by 1,2;
+2025-05-14 15:50:18 -04 ERRO:  erro de sintaxe em ou próximo a "," no caractere 140
+2025-05-14 15:50:18 -04 COMANDO:  select medico.nome, consulta.dt_consulta,hr_consulta, paciente.nome
+	from medico,consulta,paciente
+	where medico.id_medico=consulta.id_medico,paciente.id_paciente=consulta.id_paciente
+	order by 1,2;
+	
