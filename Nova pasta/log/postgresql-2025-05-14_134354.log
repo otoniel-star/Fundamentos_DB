@@ -684,3 +684,7 @@
 2025-05-14 16:01:33 -04 LOG:  não foi possível receber dados do cliente: unrecognized winsock error 10054
 2025-05-14 16:01:33 -04 LOG:  não foi possível receber dados do cliente: unrecognized winsock error 10054
 2025-05-14 16:01:33 -04 LOG:  não foi possível receber dados do cliente: unrecognized winsock error 10054
+2025-05-14 16:17:37 -04 ERRO:  cancelando o comando devido a um pedido do usu�rio
+2025-05-14 16:17:37 -04 LOG:  desligando
+2025-05-14 16:17:37 -04 LOG:  checkpoint starting: shutdown immediate
+2025-05-14 16:17:37 -04 LOG:  checkpoint complete: wrote 8 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.014 s, sync=0.014 s, total=0.067 s; sync files=7, longest=0.004 s, average=0.002 s; distance=0 kB, estimate=2987 kB; lsn=0/1E78578, redo lsn=0/1E78578
