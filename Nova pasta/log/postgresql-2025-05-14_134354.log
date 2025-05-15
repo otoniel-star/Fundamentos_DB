@@ -679,3 +679,8 @@
 	where medico.id_medico=consulta.id_medico,paciente.id_paciente=consulta.id_paciente
 	order by 1,2;
 	
+2025-05-14 16:01:33 -04 LOG:  não foi possível receber dados do cliente: unrecognized winsock error 10054
+2025-05-14 16:01:33 -04 LOG:  não foi possível receber dados do cliente: unrecognized winsock error 10054
+2025-05-14 16:01:33 -04 LOG:  não foi possível receber dados do cliente: unrecognized winsock error 10054
+2025-05-14 16:01:33 -04 LOG:  não foi possível receber dados do cliente: unrecognized winsock error 10054
+2025-05-14 16:01:33 -04 LOG:  não foi possível receber dados do cliente: unrecognized winsock error 10054
